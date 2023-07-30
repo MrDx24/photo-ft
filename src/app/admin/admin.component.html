@@ -1,0 +1,111 @@
+<!-- <p>admin works!</p> -->
+<div class="container-fluid main ">
+  <div class="row inner-main ">
+    <div class="header col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="hdtitle">Image Update</div>
+    </div>
+
+    <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+      <form class="formGroup formdsg" [formGroup]="imgLinkForm">
+
+        <label >Select category : </label>
+        <select class="btn btn-outline-primary dropdown-toggle" #ctg (change)="onSelected(ctg.value)">
+          <option default disabled>Select category</option>
+          <option>Baby</option>
+          <option>Marriage</option>
+          <option>Maternity</option>
+          <option>Pre-wedding</option>
+          <option>Birthday</option>
+          <option>Function</option>
+          <option>Extra</option>
+        </select>
+
+        <hr>
+
+        <label>Image Preview: </label><br>
+        <img class="imgsrcdsg" [src]="imgSrc">
+
+
+        <label>Select Image : </label>
+        <input class="form-control btn-file" type="file"
+        name="imgLink" formControlName="imgLink" (change)="onFileSelected($event)">
+
+        <hr>
+
+        <label>Image name : </label>
+        <input class="form-control btn-file" type="text" name="imgname" formControlName="imgname"
+        [value]="this.imgName" readonly>
+
+
+
+        <label>Selected Category : </label>
+        <input class="form-control btn-file" type="text" name="imgCat" formControlName="imgCat"
+        [value]="this.selCat" readonly>
+
+        <label>Thumbnail : </label>
+        <label>
+          <input type="radio" value="yes" formControlName="th">
+            <span>Yes</span>
+        </label>
+        <label>
+          <input type="radio" value="no" formControlName="th">
+            <span>No</span>
+        </label>
+
+        <hr>
+
+        <button [disabled]="imgLinkForm.invalid" class="btn btn-success"
+        [ngStyle]="{'cursor': imgLinkForm.invalid ? 'no-drop':'pointer'}"
+        (click)="submitImage()">Add Image</button>
+
+      </form>
+
+    </div>
+
+
+
+    <div class="row col-12 col-lg-8 col-md-8 col-sm-12 col-xs-12 imglistdsg">
+      <div class="col-lg-12 imgcathd" >
+        <p>Category :  {{ delCat }}</p>
+        <hr>
+      </div>
+
+      <div *ngIf="this.flag" class="skel-load linebr">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+        <div class="col-lg-4 imghldsg" *ngFor="let l of list; let i=index" >
+          <div class="imgdsg">
+            <img class="imdlddsg" [src]="'data:' + l.imagefile.contentType + ';base64,' + convertBufferToImage(l.imagefile.data.data)" width="100px">
+            <!-- <hr> -->
+
+            <!-- <br> -->
+
+          </div>
+          <div class="accordion accdetails" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#collapse{{i}}" aria-expanded="true" aria-controls="collapseOne">
+                  More details
+                </button>
+              </h2>
+              <div id="collapse{{i}}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Name : {{l.name.split("_")[0]}}</p>
+                  <p>Thumbnail : {{l.th}}</p>
+                  <p>Date Uploaded: {{ l.date }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary deletebtn" (click)="deleteImgDetails(l._id, this.delCat)">Delete</button>
+        </div>
+    </div>
+
+
+
+  </div>
+</div>

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.linebr{
+  border: 1px solid black;
+}
+
+.header{
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+}
+
+.hdtitle{
+  margin: 0 0 10px 0;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+
+  box-shadow: 0px 0px 10px 1px #6d6d6d;
+}
+
+.formdsg{
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 0 0 ;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px #6d6d6d;
+}
+
+label{
+  font-size: 1.1rem;
+  margin-top: 5px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+input{
+  margin-bottom: 5px;
+}
+
+input[type=text]:read-only {
+  background: #b3b3b3d1;
+}
+
+option:disabled {
+  color: white;
+}
+
+/* .imgsrcdsg{
+  margin: 10px;
+} */
+
+.imgsrcdsg {
+  align-self: center;
+  width: 80%;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: dodgerblue;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+.skel-load {
+  display: flex;
+  height: 90%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.imglistdsg {
+  /* //font-size: 1.2rem; */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px #6d6d6d;
+  align-content: baseline;
+  font-family: 'Poppins', sans-serif;
+}
+
+.imghldsg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px 0px; */
+  padding: 5px;
+  /* border-radius: 5px; */
+}
+
+.imgdsg{
+  display: flex;
+  font-size: 1rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 5px; */
+  /* ///border-radius: 5px; */
+  /* /border: 1px solid black; */
+  transition: all 0.2s ease-in-out;
+}
+.imghldsg:hover{
+  border: none;
+  background: #dddddd;
+  box-shadow: 0px 0px 10px 1px #6d6d6d;
+  transform: scale(1);
+}
+
+.imdlddsg {
+  width: 100%;/*9z0*/
+}
+
+.accdetails {
+  width: 100%;
+}
+
+.deletebtn {
+  width: 100%;/***/
+}

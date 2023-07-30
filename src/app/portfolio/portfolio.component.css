@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster+Two&family=Playfair+Display&display=swap');
+
+.carousel-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.linebr{
+  border: 1px solid black;
+}
+
+.linebr1{
+  border: 1px solid white;
+}
+
+.navbar{
+  background-color: white;
+  box-shadow: 0px 1px 1px 0px black;
+}
+
+.navbar-brand{
+  font-family: 'Lobster Two', cursive;;
+  font-size: 2rem;
+}
+
+
+.nav-link{
+  font-family: 'Playfair Display', serif;;
+  font-weight: bold !important;
+  color: black;
+  margin: 5px 20px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.nav-item{
+  position: relative;
+}
+
+.nav-link:after{
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: 10px;
+  transition: 0.3s;
+}
+.nav-link:hover{
+  color: #000;
+}
+.nav-link:hover:after{
+  width: 100%;
+}
+
+.section{
+  width: 100vw;
+  min-height: 100vh;
+  max-height: max-content;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+
+.inner-main{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  /* //overflow: hidden; */
+}
+
+.intdsg1{
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.intro-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 5rem;
+  /* text-align: center; */
+  font-family: 'Lobster Two', cursive;;
+  width: max-content;
+  height: max-content;
+  padding: 10px 60px 10px 20px;
+  color: #000;
+  /* /overflow: hidden; */
+}
+
+.intro-img{
+  width: 450px;
+}
+
+.intro-chat-btn{
+  font-size: 2rem;
+  width: 200px;
+  padding: 5px 10px 5px 10px;
+  background-color: white;
+  font-family: 'Libre Baskerville', serif;
+  transition: 0.25s;
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.int-icon{
+  padding-right: 10px;
+  font-size: 2rem;
+}
+
+/* And from the left */
+.intro-chat-btn:hover,
+.intro-chat-btn:focus {
+  color: white;
+  box-shadow: inset 6.5em 0 0 0 black;
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+.intdsg2{
+  height: max-content;
+}
+
+/* .t1{
+  font-size: 2rem;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+.t2{
+  font-size: 2rem;
+  font-family: 'Lobster Two', cursive;
+
+}
+
+.t3{
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+} */
+
+/* .scroll-down-sign{
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  top: 600px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: #000;
+  transform: rotate(270deg);
+} */
+
+.inner-main2{
+  width: 100vw;
+  height: max-content;
+  padding: 0;
+  margin: 0;
+  /* display: flex; */
+}
+
+.headingsdg
+{
+  margin-top: 100px;
+  padding: 10px 100px;
+  font-size: 4rem;
+  height: max-content;
+  font-family: 'Lobster Two', cursive;;
+  color: #000;
+}
+
+.spinner-border {
+  font-size: 1rem;
+}
+
+.rwcontent{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.imgCategory{
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  padding: 20px 100px;
+}
+
+.catName{
+  font-family: 'Lobster Two', cursive;
+  font-size: 2rem;
+}
+
+.catimg{
+  width: 100%;
+}
+
+.test{
+  width: 100%;
+}
+
+.catbtn{
+  font-family: 'Libre Baskerville', serif;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+}
+
+.modalhead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lobster Two', cursive;;
+  color: #000;
+}
+
+.modal-dialog {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 80%;
+  width: 80% !important;
+  height: 50%;
+}
+
+
+.modalcont{
+  display: flex;
+}
+
+.crdsg{
+  width: 60%;
+}
+
+.crcont{
+  width: 40%;
+}
+
+.inner-main3{
+  width: 100vw;
+  height: max-content;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 100px;
+  /* display: flex; */
+}
+
+.abcont{
+  padding: 10px 100px;
+  font-family: 'Libre Baskerville', serif;;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.inner-main4{
+  width: 100vw;
+  height: max-content;
+  padding: 0;
+  margin: 0;
+  padding-bottom:  100px ;
+  /* display: flex; */
+}
+
+.ctcont{
+  padding: 10px 100px;
+  font-family: 'Libre Baskerville', serif;;
+  /* text-transform: capitalize; */
+  color: #000;
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between; */
+}
+
+.headingsdg1{
+  margin-top: 0px;
+
+}
+
+.contenttext{
+  padding: 10px 20px;
+}
