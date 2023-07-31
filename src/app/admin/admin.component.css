@@ -49,9 +49,6 @@ option:disabled {
   color: white;
 }
 
-/* .imgsrcdsg{
-  margin: 10px;
-} */
 
 .imgsrcdsg {
   align-self: center;
@@ -78,7 +75,6 @@ input::file-selector-button {
 }
 
 .imglistdsg {
-  /* //font-size: 1.2rem; */
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 1px #6d6d6d;
@@ -91,9 +87,7 @@ input::file-selector-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 10px 0px; */
   padding: 5px;
-  /* border-radius: 5px; */
 }
 
 .imgdsg{
@@ -103,9 +97,6 @@ input::file-selector-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 5px; */
-  /* ///border-radius: 5px; */
-  /* /border: 1px solid black; */
   transition: all 0.2s ease-in-out;
 }
 .imghldsg:hover{
@@ -116,7 +107,7 @@ input::file-selector-button {
 }
 
 .imdlddsg {
-  width: 100%;/*9z0*/
+  width: 100%;
 }
 
 .accdetails {
@@ -124,5 +115,5 @@ input::file-selector-button {
 }
 
 .deletebtn {
-  width: 100%;/***/
+  width: 100%;
 }

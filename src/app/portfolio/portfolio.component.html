@@ -32,13 +32,6 @@
 <!-- Content start -->
 <div class="container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 section ">
 
-  <!-- <div class="scroll-down-sign linebr">
-    <i class="bi bi-chevron-left"></i>
-    <i class="bi bi-chevron-left"></i>
-    <i class="bi bi-chevron-left"></i>
-    Scroll Down
-  </div> -->
-
   <div class="row inner-main ">
     <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 intdsg1 " style="margin: none;">
       <div class="intro-text col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 ">
@@ -66,7 +59,7 @@
           <div class="catimg ">
             <img *ngIf="listthimg[i]!=null" class="test" [src]="'data:' + this.listthimg[i].imagefile.contentType + ';base64,' + convertBufferToImage(this.listthimg[i].imagefile.data.data)" alt="">
           </div>
-          <!-- (click)="getList(c)" -->
+
           <button class="catbtn " data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getCatImages(c)">
             Get Offer <i class="bi bi-arrow-right"></i>
           </button>
@@ -83,7 +76,7 @@
                     </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+
                   <div class="modalcont ">
                     <div id="carouselExample" class="carousel slide carousel-fade crdsg" style="border: 1px solid black; width: 50%; ">
                       <div class="carousel-indicators">
@@ -142,13 +135,7 @@
           <h5>Business Hours : </h5>
           <hr>
           <h6>
-          <!-- Mon:	10:00 AM - 9:00 PM<br>
-          Tue:	10:00 AM - 9:00 PM<br>
-          Wed:	10:00 AM - 9:00 PM<br>
-          Thu:	10:00 AM - 9:00 PM<br>
-          Fri:	10:00 AM - 9:00 PM<br>
-          Sat:	10:00 AM - 9:00 PM<br>
-          Sun:	10:00 AM - 9:00 PM<br> -->
+
           <table>
 
 
@@ -159,7 +146,6 @@
                 <td>10:00 AM</td>
                 <td style="text-align: center;" >-</td>
                 <td>9:00 PM</td>
-                <!-- <td></td> -->
               </tr>
               <tr>
                 <td>Tue</td>
@@ -167,7 +153,6 @@
                 <td>10:00 AM</td>
                 <td style="text-align: center;" >-</td>
                 <td>9:00 PM</td>
-                <!-- <td></td> -->
               </tr>
               <tr>
                 <td>Wed</td>
@@ -175,7 +160,6 @@
                 <td>10:00 AM</td>
                 <td style="text-align: center;" >-</td>
                 <td>9:00 PM</td>
-                <!-- <td></td> -->
               </tr>
               <tr>
                 <td>Thu</td>
@@ -183,7 +167,6 @@
                 <td>10:00 AM</td>
                 <td style="text-align: center;" >-</td>
                 <td>9:00 PM</td>
-                <!-- <td></td> -->
               </tr>
               <tr>
                 <td>Fri</td>
@@ -191,7 +174,6 @@
                 <td>10:00 AM</td>
                 <td style="text-align: center;" >-</td>
                 <td>9:00 PM</td>
-                <!-- <td></td> -->
               </tr>
               <tr>
                 <td>Sat</td>
@@ -199,7 +181,6 @@
                 <td>10:00 AM</td>
                 <td style="text-align: center;" >-</td>
                 <td>9:00 PM</td>
-                <!-- <td></td> -->
               </tr>
               <tr>
                 <td>Sun</td>
@@ -207,10 +188,8 @@
                 <td>10:00 AM</td>
                 <td style="text-align: center;" >-</td>
                 <td>9:00 PM</td>
-                <!-- <td></td> -->
               </tr>
             </tbody>
-            <!-- </tr> -->
             </table>
           </h6>
 
@@ -229,4 +208,4 @@
 
 
 
-<!-- //`c c    -->
+

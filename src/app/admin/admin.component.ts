@@ -37,7 +37,7 @@ export class AdminComponent {
 
   }
 
-  //Save images  -//
+
   onFileSelected(event: any) {
     this.showPreview(event);
     this.selectedImage = event.target.files[0] as File;
@@ -50,7 +50,6 @@ export class AdminComponent {
       return;
     }
 
-    // Create a new FormData object to hold the image data
     const imageFormData = new FormData();
 
     imageFormData.append('imageName', this.imgName);
@@ -60,15 +59,11 @@ export class AdminComponent {
 
     this.http.post('https://photo-bt.onrender.com/upload/image', imageFormData).subscribe(
       (response) => {
-        //console.log('Image upload success:', response);
         this.getCatImages(this.selCat);
         this.resetForm();
-        // Handle the response from the server if needed
       });
   }
-  //Save images  -//
 
-  //Retrive images//
   getCatImages(cat:any){
 
     this.list = [];
@@ -76,18 +71,13 @@ export class AdminComponent {
     const headers = new HttpHeaders().set('Cache-Control', 'no-cache');
     this.http.get<any[]>('https://photo-bt.onrender.com/upload/getimages/' + cat, { headers }).subscribe((response) => {
       this.flag = false;
-      //console.log("response:", response);
-      this.list = response; // Since the API response is an object with a 'result' property containing the array
-      //console.log("response:", this.list);
-      //this.listthimg=response[0];
+      this.list = response;
     },(error) => {
       this.flag = false;
       console.log("error:", error);
     } );
   }
-  //Retrive images//
 
-  //Delete images//
   deleteImgDetails(id:any, cat:any){
     this.http.delete('https://photo-bt.onrender.com/upload/deleteimage/' + id).subscribe((response) => {
       this.flag = false;
@@ -99,10 +89,7 @@ export class AdminComponent {
     } );
 
   }
-  //Delete images//
 
-
-  // Extra functions //
   get imgLink() {
     return this.imgLinkForm.get('imgLink');
   }
@@ -130,9 +117,7 @@ export class AdminComponent {
     this.imgLinkForm.get('imgCat')?.setValue(this.selCat);
   }
 
-  // getName(valueName:any){
-  //   return valueName;
-  // }
+
   setName(){
     this.imgLinkForm.get('imgname')?.setValue(this.imgName);
   }
@@ -171,9 +156,8 @@ export class AdminComponent {
   }
 
   resetForm(){
-    // /this.imgLinkForm.set('imagLink').setvalue("");
+
     this.imgName="";
-    // this.selCat="";
     this.imgSrc = "../../assets/images/download.jpg";
   }
 

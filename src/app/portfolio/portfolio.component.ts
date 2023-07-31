@@ -19,8 +19,6 @@ export class PortfolioComponent {
       for(let i=0; i<this.listcat.length; i++) {
         this.flag[i] = true
         this.http.get<any>('https://photo-bt.onrender.com/upload/getimage/' + this.listcat[i]).subscribe((response) => {
-        //console.log("response:", response);
-        // data = response;
         this.listthimg[i] = response
         this.flag[i] = false
       });
@@ -33,47 +31,14 @@ export class PortfolioComponent {
     this.flagallimg = true;
     const headers = new HttpHeaders().set('Cache-Control', 'no-cache');
     this.http.get<any[]>('https://photo-bt.onrender.com/upload/getimages/' + ct, { headers }).subscribe((response) => {
-
-      // console.log("response:", response[0].category);
-      // console.log("response:", response.length);
-      // console.log("response:", response[2].imagefile.data.data)/;
-      this.list = response; // Since the API response is an object with a 'result' property containing the array
+      this.list = response;
       this.flagallimg = false
-      //console.log("response:", this.list);
-      //this.listthimg=response[0];
     });
   }
-
-  // getList(c:any){
-  //   this.getCatImages(c);
-  // }
-
-  // getthImages(ct: any, listthval:any) {
-  //   const headers = new HttpHeaders().set('Cache-Control', 'no-cache');
-  //   let data;
-  //   return this.http.get<any>('http://localhost:3000/upload/getimage/' + ct, { headers }).subscribe((response) => {
-  //     console.log("response:", response);
-  //     // data = response;
-  //     listthval = response
-  //     //..,,//this.ngOnInit()
-  //   });
-
-  //     //console.log(data)
-
-  // }
-
-//   scrollToSection(sectionId: any) {
-//     const targetElement = document.getElementById(sectionId);
-//     if (targetElement) {
-//         targetElement.scrollIntoView({ behavior: 'smooth' });
-//     }
-// }
 
 
 
   convertBufferToImage(data:any) {
-    // /console.log(`data:image/png;base64,${this.bufferToBase64(data)}`)
-
     return this.bufferToBase64(data);
   }
 
@@ -88,3 +53,6 @@ export class PortfolioComponent {
     return btoa(binary.join(''));
   }
 }
+
+
+
