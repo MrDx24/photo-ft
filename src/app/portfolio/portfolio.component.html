@@ -85,7 +85,7 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                       </div>
                       <div class="carousel-inner">
-                        <div class="carousel-item active" *ngFor="let l of list">
+                        <div class="carousel-item active" *ngFor="let l of list, let i=index">
                           <img [src]="'data:' + l.imagefile.contentType + ';base64,' + convertBufferToImage(l.imagefile.data.data)" class="d-block w-100" style="width: 100px;">
                         </div>
                       </div>
@@ -98,7 +98,13 @@
                         <span class="visually-hidden">Next</span>
                       </button>
                     </div>
-                    <div class="crcont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, distinctio fuga at, modi numquam, veniam molestias amet aspernatur odit eius vero possimus ducimus doloribus saepe. Magnam animi nobis consectetur tempore?</div>
+                    <div class="crcont">
+                      <span>For more details, contact on Whatsapp.</span>
+                      <hr>
+                      <a class="intro-chat-btn" href="https://wa.me/7350199538" target="_blank">
+                        <i class="bi bi-whatsapp int-icon"></i>Chat
+                      </a>
+                    </div>
                   </div>
                 </div>
 

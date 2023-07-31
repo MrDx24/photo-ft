@@ -218,8 +218,15 @@
 }
 
 .crcont{
-  width: 40%;
+  width: 50%;
+  padding: 10px;
 }
+
+.crcont span {
+  font-size: 1.5rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
 
 .inner-main3{
   width: 100vw;
