@@ -16,15 +16,15 @@ export class PortfolioComponent {
   flag = [false,false,false,false,false,false,false]
   flagallimg:any = false
   constructor(private http: HttpClient){
-    //   for(let i=0; i<this.listcat.length; i++) {
-    //     this.flag[i] = true
-    //     this.http.get<any>('http://localhost:3000/upload/getimage/' + this.listcat[i]).subscribe((response) => {
-    //     //console.log("response:", response);
-    //     // data = response;
-    //     this.listthimg[i] = response
-    //     this.flag[i] = false
-    //   });
-    // }
+      for(let i=0; i<this.listcat.length; i++) {
+        this.flag[i] = true
+        this.http.get<any>('https://photo-bt.onrender.com/upload/getimage/' + this.listcat[i]).subscribe((response) => {
+        //console.log("response:", response);
+        // data = response;
+        this.listthimg[i] = response
+        this.flag[i] = false
+      });
+    }
 
   }
 
@@ -32,7 +32,7 @@ export class PortfolioComponent {
   getCatImages(ct: any) {
     this.flagallimg = true;
     const headers = new HttpHeaders().set('Cache-Control', 'no-cache');
-    this.http.get<any[]>('http://localhost:3000/upload/getimages/' + ct, { headers }).subscribe((response) => {
+    this.http.get<any[]>('https://photo-bt.onrender.com/upload/getimages/' + ct, { headers }).subscribe((response) => {
 
       // console.log("response:", response[0].category);
       // console.log("response:", response.length);
@@ -62,7 +62,12 @@ export class PortfolioComponent {
 
   // }
 
-
+//   scrollToSection(sectionId: any) {
+//     const targetElement = document.getElementById(sectionId);
+//     if (targetElement) {
+//         targetElement.scrollIntoView({ behavior: 'smooth' });
+//     }
+// }
 
 
 

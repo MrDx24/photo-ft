@@ -58,7 +58,7 @@ export class AdminComponent {
     imageFormData.append('th', this.th?.value);
     imageFormData.append('image', this.selectedImage);
 
-    this.http.post('http://127.0.0.1:3000/upload/image', imageFormData).subscribe(
+    this.http.post('https://photo-bt.onrender.com/upload/image', imageFormData).subscribe(
       (response) => {
         //console.log('Image upload success:', response);
         this.getCatImages(this.selCat);
@@ -74,7 +74,7 @@ export class AdminComponent {
     this.list = [];
     this.flag = true;
     const headers = new HttpHeaders().set('Cache-Control', 'no-cache');
-    this.http.get<any[]>('http://localhost:3000/upload/getimages/' + cat, { headers }).subscribe((response) => {
+    this.http.get<any[]>('https://photo-bt.onrender.com/upload/getimages/' + cat, { headers }).subscribe((response) => {
       this.flag = false;
       //console.log("response:", response);
       this.list = response; // Since the API response is an object with a 'result' property containing the array
@@ -89,7 +89,7 @@ export class AdminComponent {
 
   //Delete images//
   deleteImgDetails(id:any, cat:any){
-    this.http.delete('http://localhost:3000/upload/deleteimage/' + id).subscribe((response) => {
+    this.http.delete('https://photo-bt.onrender.com/upload/deleteimage/' + id).subscribe((response) => {
       this.flag = false;
       console.log("response:", response);
       this.getCatImages(cat);
