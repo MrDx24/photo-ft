@@ -204,7 +204,11 @@
   height: max-content;
   padding: 20px 50px;/*0*/
 }
-
+/* v */
+/* v */
+.imgCategory:hover{
+  transform: scale(1.05);
+}
 .catName{
   font-family: 'Lobster Two', cursive;
   font-size: 2rem;
@@ -333,6 +337,9 @@
   .imgCategory{
     padding: 20px 20px;
   }
+  .imgCategory:hover{
+    transform: none;
+  }
   .catName{
     font-size: 1.5rem;
   }
@@ -375,6 +382,9 @@
   .imgCategory{
     padding: 20px 20px;
   }
+  .imgCategory:hover{
+    transform: none;
+  }
   .catName{
     font-size: 1.5rem;
   }
@@ -403,12 +413,18 @@
   .imgCategory{
     padding: 20px 20px;
   }
+  .imgCategory:hover{
+    transform: none;
+  }
  }
 
 /* // Large devices (desktops, 992px and up)1 */
 @media (min-width: 992px) and (max-width: 1199.9px) {
   .imgCategory{
     padding: 20px 20px;
+  }
+  .imgCategory:hover{
+    transform: none;
   }
  }
 
