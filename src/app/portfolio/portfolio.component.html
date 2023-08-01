@@ -44,6 +44,10 @@
       <img class="intro-img col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 " src="../assets/images/111.png" alt="">
     </div>
 
+    <span class="mouse-btn">
+      <span class="mouse-scroll"></span>
+    </span>
+
     <div class="row inner-main2 " id="recentworks">
       <div class="headingsdg col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12" >
         Recent Works
@@ -60,7 +64,7 @@
             <img *ngIf="listthimg[i]!=null" class="test" [src]="'data:' + this.listthimg[i].imagefile.contentType + ';base64,' + convertBufferToImage(this.listthimg[i].imagefile.data.data)" alt="">
           </div>
 
-          <button class="catbtn " data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getCatImages(c)">
+          <button class="catbtn btn " data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getCatImages(c)">
             Get Offer <i class="bi bi-arrow-right"></i>
           </button>
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
