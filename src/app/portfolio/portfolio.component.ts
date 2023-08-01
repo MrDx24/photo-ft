@@ -28,6 +28,7 @@ export class PortfolioComponent {
 
 
   getCatImages(ct: any) {
+    this.list = [];
     this.flagallimg = true;
     const headers = new HttpHeaders().set('Cache-Control', 'no-cache');
     this.http.get<any[]>('https://photo-bt.onrender.com/upload/getimages/' + ct, { headers }).subscribe((response) => {
