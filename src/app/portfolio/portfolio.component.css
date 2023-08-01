@@ -19,6 +19,7 @@
 .navbar{
   background-color: white;
   box-shadow: 0px 1px 1px 0px black;
+  width: inherit;
 }
 
 .navbar-brand{
@@ -59,16 +60,15 @@
 }
 
 .section{
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   max-height: max-content;
-  padding: 0;
-  margin: 0;
-  position: relative;
 }
 
 
 .inner-main{
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -77,7 +77,7 @@
 
 .intdsg1{
   height: 100vh;
-
+  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -136,7 +136,7 @@
 
 
 .inner-main2{
-  width: 100vw;
+  width: 100%;/*vw*/
   height: max-content;
   padding: 0;
   margin: 0;
@@ -168,7 +168,7 @@
   display: flex;
   flex-direction: column;
   height: max-content;
-  padding: 20px 100px;
+  padding: 20px 50px;/*0*/
 }
 
 .catName{
@@ -189,6 +189,9 @@
   background-color: black;
   color: white;
   padding: 10px 0;
+}
+.modal {
+  padding: 0;
 }
 
 .modalhead{
@@ -229,7 +232,7 @@
 
 
 .inner-main3{
-  width: 100vw;
+  width: 100%;/*vw*/
   height: max-content;
   padding: 0;
   margin: 0;
@@ -244,7 +247,7 @@
 }
 
 .inner-main4{
-  width: 100vw;
+  width: 100%;/*vw*/
   height: max-content;
   padding: 0;
   margin: 0;
@@ -265,3 +268,98 @@
 .contenttext{
   padding: 10px 20px;
 }
+
+
+/*
+}
+ */
+@media (min-width: 100px) and (max-width: 575px) {
+  .inner-main{
+    margin: 50px 0 0 0;
+  }
+  .intro-text {
+    font-size: 4rem;
+  }
+  .headingsdg,
+  .abcont,
+  .ctcont{
+    padding: 10px 20px;
+  }
+  .imgCategory{
+    padding: 20px 20px;
+  }
+  .catName{
+    font-size: 1.5rem;
+  }
+  iframe {
+    width: 20rem;
+  }
+  .modalcont {
+    display: flex;
+    flex-direction: column;
+  }
+  .crdsg{
+    width: 100%;
+  }
+
+  .crcont{
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) .*/
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .intro-text {
+    font-size: 4rem;
+  }
+  .headingsdg,
+  .abcont,
+  .ctcont{
+    padding: 10px 20px;
+  }
+  .imgCategory{
+    padding: 20px 20px;
+  }
+  .catName{
+    font-size: 1.5rem;
+  }
+  iframe {
+    width: 20rem;
+  }
+  .modalcont {
+    display: flex;
+    flex-direction: column;
+  }
+  .crdsg{
+    width: 100%;
+  }
+
+  .crcont{
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .inner-main{
+    margin: 50px 0 0 0;
+  }
+  .imgCategory{
+    padding: 20px 20px;
+  }
+ }
+
+/* // Large devices (desktops, 992px and up)1 */
+@media (min-width: 992px) and (max-width: 1199.9px) {
+  .imgCategory{
+    padding: 20px 20px;
+  }
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.9px) {  }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px){  }

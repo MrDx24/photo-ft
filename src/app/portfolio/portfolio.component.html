@@ -3,6 +3,10 @@
 
 
 
+
+
+<!-- Content start -->
+<div class="container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 section ">
 <!-- Navbar start -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container-fluid">
@@ -28,11 +32,7 @@
   </div>
 </nav>
 <!-- Navbar end -->
-
-<!-- Content start -->
-<div class="container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 section ">
-
-  <div class="row inner-main ">
+  <div class="row inner-main linebr">
     <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 intdsg1 " style="margin: none;">
       <div class="intro-text col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 ">
         Elegance <br> <span >Photography <br>& Films</span>
@@ -44,12 +44,12 @@
       <img class="intro-img col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 " src="../assets/images/111.png" alt="">
     </div>
 
-    <div class="row inner-main2 " id="recentworks">
+    <div class="row inner-main2 linebr" id="recentworks">
       <div class="headingsdg col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12" >
         Recent Works
       </div>
       <div class="rwcontent col-lg-12 col-12">
-        <div *ngFor="let c of listcat; let i=index" class="imgCategory col-lg-4 col-md-6 col-sm-6 col-xs-12 col-12">
+        <div *ngFor="let c of listcat; let i=index" class="imgCategory col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6">
           <div class="catName ">
             {{ c }}
             <div *ngIf="this.flag[i]" class="spinner-border" role="status">
@@ -78,7 +78,7 @@
                   </div>
 
                   <div class="modalcont ">
-                    <div id="carouselExample" class="carousel slide carousel-fade crdsg" style="border: 1px solid black; width: 50%; ">
+                    <div id="carouselExample" class="carousel slide carousel-fade crdsg" style="border: 1px solid black; ">
                       <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -114,7 +114,7 @@
         </div>
       </div>
     </div>
-    <div class="row inner-main3 " id="aboutme">
+    <div class="row inner-main3 linebr" id="aboutme">
       <div class="headingsdg col-lg-12 " >
         About Me
       </div>
@@ -125,7 +125,7 @@
           to your expectations and fulfill your requirement at reasonable price and quality.</h4>
       </div>
     </div>
-    <div class="row inner-main4 " id="contact">
+    <div class="row inner-main4 linebr" id="contact">
       <div class="headingsdg headingsdg1 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 " >
         Contact
       </div>
@@ -201,7 +201,7 @@
 
         </div>
 
-        <div class="contentmap col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12 ">
+        <div class="contentmap col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6 ">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1890.5557796928729!2d73.79691160791236!3d18.614051338743614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8fe8b51f64d%3A0xde3a99f4fd61049e!2sPhase%202%2C%20Vaibhav%20Nagar%2C%20Pimpri%20Colony%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411017!5e0!3m2!1sen!2sin!4v1679329967916!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
